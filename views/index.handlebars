@@ -1,0 +1,50 @@
+{{#each postList}}
+<div class="post">
+    <div class="title">
+        <div class="title-image">
+            <img src="/icon/8bit_icon_set/background/heart.png" />
+        </div>
+        <div class="title-text">
+            <a href="/posts/{{_id}}">{{title}}</a>            
+        </div>
+    </div>
+    <div class="post-image">
+        <img src="{{bannerImageUrl}}" />
+    </div>
+    <div class="post-body">
+        <div class="post-content">
+            {{description}}
+        </div>
+        <div class="post-info">
+            <span style="float:left;padding-left:15px;">
+                {{#each category}}
+                    {{name}}
+                {{/each}}
+            </span>
+            <span>Posted By {{postedBy.username}}</span>
+        </div>
+        <div class="post-info">
+            {{timestamp}}
+        </div>
+    </div>
+    <div class="post-footer">
+        <div class="seperator row">
+            <div class="sep-left"></div>
+            <div class="sep-img">
+                <img src="/img/Seperator/pacman-512.png" />
+            </div>
+            <div class="sep-right"></div>
+        </div>
+        <div class="footer-content clearfix">
+            <a href="/posts/{{_id}}" class="read-more pull-left">Read More</a>
+            <ul class="social-icon pull-right">
+                <li><a href="#"><img src="/icon/social_icons/facebook.png" /></a></li>
+                <li><a href="#"><img src="/icon/social_icons/twitter.png" /></a></li>
+                <li><a href="#"><img src="/icon/social_icons/google.png" /></a></li>
+                <li><a href="#"><img src="/icon/social_icons/linkedin.png" /></a></li>
+                <li><a href="#"><img src="/icon/social_icons/pinterest.png" /></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{{/each}}

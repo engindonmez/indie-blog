@@ -1,0 +1,254 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Indies Blog</title>
+  <link href="/css/reset.css" rel="stylesheet" />
+  <link href="/css/bootstrap.css" rel="stylesheet" />
+  <link href="/css/animate.css" rel="stylesheet" />
+  <link href="/css/site.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+ 
+  <link rel="icon" type="image/png" href="https://cdn3.iconfinder.com/data/icons/line/36/ghost-512.png">
+  <script src="/js/jquery-3.1.1.js"></script>
+  <script src="/js/bootstrap.js"></script>
+  <script src="/js/summernote.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+  <script src="/js/global.js"></script>
+</head>
+<!-- /container -->
+
+<body>
+  <div class="flying-icons hidden-sm hidden-xs">
+    <div class="icon">
+      <img class="fly-icon" src="/img/flaying-icons/invader-1.png" />
+      <img class="bubble" src="/img/flaying-icons/bubble-1.png" />
+    </div>
+    <div class="icon">
+      <img class="fly-icon" src="/img/flaying-icons/invader-2.png" />
+      <img class="bubble" src="/img/flaying-icons/bubble-2.png" />
+    </div>
+    <div class="icon">
+      <img class="fly-icon" src="/img/flaying-icons/invader-3.png" />
+      <img class="bubble" src="/img/flaying-icons/bubble-3.png" />
+    </div>
+    <div class="icon">
+      <img class="fly-icon" src="/img/flaying-icons/invader-4.png" />
+      <img class="bubble" src="/img/flaying-icons/bubble-4.png" />
+    </div>
+    <div class="icon">
+      <img class="fly-icon" src="/img/flaying-icons/pacman-1.png" />
+      <img class="bubble" src="/img/flaying-icons/bubble-5.png" />
+    </div>
+    <div class="icon">
+      <img class="fly-icon" src="/img/flaying-icons/pacman-1.png" />
+      <img class="bubble" src="/img/flaying-icons/bubble-7.png" />
+    </div>
+    <div class="icon">
+      <img class="fly-icon" src="/img/flaying-icons/pacman-2.png" />
+      <img class="bubble" src="/img/flaying-icons/bubble-6.png" />
+    </div>
+    <div class="icon">
+      <img class="fly-icon" src="/img/flaying-icons/pacman-2.png" />
+      <img class="bubble" src="/img/flaying-icons/bubble-8.png" />
+    </div>
+  </div>
+  <div class="container">
+    <header>
+      <div class="banner">
+        {{#if user}}
+        <div class="user-profile">
+          <a href="#">{{user.username}}</a><span> / </span><a href="/users/logout">Logout</a>
+        </div>
+        {{else}}
+        <div class="login-register">
+          <a href="/users/login#login">Login</a> / <a href="/users/login#register">Register</a>
+        </div>
+        {{/if}}
+        <div class="logo">
+          <h2><b>Indie Game Blog</b>
+          </h2>
+          <h4>All About Indie Games And Developers</h4>
+        </div>
+        <div class="menu">
+          <div class="nav-menu">
+            <ul>
+              <li class="active">
+                <a role="presentation" href="/">Home</a>
+                <img src="/icon/8bit_icon_set/no background/xbox_nobg.png" />
+              </li>
+              <li>
+                <a href="#">Posts</a>
+                <img src="/icon/8bit_icon_set/no background/droid_nobg.png" />
+              </li>
+              <li>
+                <a href="/posts/add">Add Post</a>
+                <img src="/icon/8bit_icon_set/no background/notes_nobg.png" />
+              </li>
+              <li>
+                <a href="#">About Us</a>
+                <img src="/icon/8bit_icon_set/no background/heart_nobg.png" />
+              </li>
+              <li>
+                <a href="#">Contact</a>
+                <img src="/icon/8bit_icon_set/no background/mail_nobg.png" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="lastest row">
+      <div class="col-md-3 col-sm-6 col-xs-6 item">
+        <a href="#"><img class="img-responsive" src="/img/thumbnails/game-1.jpg" /></a>
+        <div class="post-desc">
+          <h6><a href="#">Title</a></h6>
+          <span><a href="#">Category</a></span>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-6 item">
+        <a href="#"><img class="img-responsive" src="/img/thumbnails/game-2.png" /></a>
+        <div class="post-desc">
+          <h6><a href="#">Title</a></h6>
+          <span><a href="#">Category</a></span>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-6 item">
+        <a href="#"><img class="img-responsive" src="/img/thumbnails/game-3.jpg" /></a>
+        <div class="post-desc">
+          <h6><a href="#">Title</a></h6>
+          <span><a href="#">Category</a></span>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-6 item">
+        <a href="#"><img class="img-responsive" src="/img/thumbnails/game-3.jpg" /></a>
+        <div class="post-desc">
+          <h6><a href="#">Title</a></h6>
+          <span><a href="#">Category</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-10">
+      <div class="col-md-8 content">
+        {{{body}}}
+      </div>
+      <div clasS="col-md-4 side-bar">
+        <div class="search-bar">
+          <form id="searchForm">
+            <div>
+              <input type="text" id="search" name="search" placeholder="Enter Keyword.." size="15" />
+              <img src="/icon/8bit_icon_set/background/search.png" />
+              <input type="submit" value="Search" />
+            </div>
+          </form>
+        </div>
+        {{>popular}}
+        <div class="categories">
+          <div class="title">
+            <div class="title-image">
+              <img src="/icon/8bit_icon_set/background/appdrawer.png" />
+            </div>
+            <div class="title-text">
+              <p>Categories</p>
+            </div>
+          </div>
+          <div class="category-list">
+            <div class="item">
+              <img class="img-icon" src="/icon/new-icons/list-item-icon-green.png" />
+              <img class="img-icon" src="/icon/new-icons/list-item-icon.png" />
+              <a>Indie Games</a>
+            </div>
+            <div class="item">
+              <img class="img-icon" src="/icon/new-icons/list-item-icon-green.png" />
+              <img class="img-icon" src="/icon/new-icons/list-item-icon.png" />
+              <a>Programming</a>
+            </div>
+            <div class="item">
+              <img class="img-icon" src="/icon/new-icons/list-item-icon-green.png" />
+              <img class="img-icon" src="/icon/new-icons/list-item-icon.png" />
+              <a>3D Modeling</a>
+            </div>
+            <div class="item">
+              <img class="img-icon" src="/icon/new-icons/list-item-icon-green.png" />
+              <img class="img-icon" src="/icon/new-icons/list-item-icon.png" />
+              <a>Indie Developers</a>
+            </div>
+            <div class="item">
+              <img class="img-icon" src="/icon/new-icons/list-item-icon-green.png" />
+              <img class="img-icon" src="/icon/new-icons/list-item-icon.png" />
+              <a>Indie Studios</a>
+            </div>
+            <div class="item">
+              <img class="img-icon" src="/icon/new-icons/list-item-icon-green.png" />
+              <img class="img-icon" src="/icon/new-icons/list-item-icon.png" />
+              <a>Game Engines</a>
+            </div>
+          </div>
+        </div>
+        <div class="tags">
+          <div class="title">
+            <div class="title-image">
+              <img src="/icon/8bit_icon_set/background/text.png" />
+            </div>
+            <div class="title-text">
+              <p>TAGS</p>
+            </div>
+          </div>
+          <div class="tag-list">
+            <div class="tag-item">
+              <p>development</p>
+            </div>
+            <div class="tag-item">
+              <p>indie games</p>
+            </div>
+            <div class="tag-item">
+              <p>3d modeling</p>
+            </div>
+            <div class="tag-item">
+              <p>c#</p>
+            </div>
+            <div class="tag-item">
+              <p>javascript</p>
+            </div>
+            <div class="tag-item">
+              <p>game engine</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    //Menu Item Active Start
+    var menuItem = $('.nav-menu li').click(function () {
+      menuItem.removeClass('active');
+      $(this).addClass('active');
+    });
+
+    $('.nav-menu li img').click(function () {
+      window.location.href = $(this).prev().attr('href');
+    });
+    //Menu Item Active End
+
+    //Flying Icon Hover Start
+    $('.fly-icon').hover(function () {
+      $(this).next().toggleClass('opacity-06');
+    });
+    //Flying Icon Hover End
+
+    //Category Item Hover Animation Start
+    var categoryItem = $('.categories .category-list .item a');
+    var icon_1 = $('.categories .category-list .item img:first');
+    var icon_2 = $('.categories .category-list .item img:last');
+    categoryItem.hover(function () {
+      $(this).prev().prev().toggleClass('anim');
+      $(this).prev().toggleClass('opacity-0');
+    });
+  //Category Item Hover Animation End
+  </script>
+</body>
+
+</html>

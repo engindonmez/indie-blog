@@ -1,0 +1,25 @@
+<div class="post">
+    <div class="title">
+        <div class="title-image">
+            <img src="/icon/8bit_icon_set/background/heart.png" />
+        </div>
+        <div class="title-text">
+            <p>{{postItem.title}}</p>            
+        </div>
+    </div>
+    <img src="{{postItem.postImageUrl}}" alt="#" style="width: 100%">
+    <div class="post-body">
+        <div class="post-content">
+            {{{postItem.content}}}
+        </div>
+        <div class="post-info">
+            Posted By {{postItem.postedBy.username}}
+        </div>
+        <div class="post-info">
+            {{postItem.timestamp}}
+        </div>
+    </div>
+</div>
+<script>
+    $('.lastest').hide();
+</script>

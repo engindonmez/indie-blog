@@ -1,0 +1,73 @@
+{{!-- <h2 class="page-header">Account Login</h2>
+<form action="/users/login" method="post">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" name="username" placeholder="Username">
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-default">
+        Submit
+    </button>
+</form> --}}
+<div class="centered">
+    <div class="user-div">
+        <div class="user-banner">
+            <img src="/img/Banners/banner-login.jpg" />
+        </div>
+        <div class="user-form">
+            <div class="title">
+                <div class="title-image">
+                    <img src="/icon/8bit_icon_set/background/drawing.png">
+                </div>
+                <div class="title-text">
+                    <p>Login</p>
+                </div>
+            </div>
+            <div class="user-form-body clearfix">
+                <form action="/users/register" method="post" id="RegisterUser" class="hidden clearfix animated">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" name="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" name="username" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="password2">Confirm Password</label>
+                        <input type="password" class="form-control" name="password2" placeholder="Password">
+                    </div>
+                    <input type="submit" id="AddUser" class="btn btn-add-user pull-right" />
+                </form>
+                <form action="/users/login" method="post" id="LoginUser" class="clearfix animated">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" name="username" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Password">
+                    </div>
+                    <input type="submit" id="Login" class="btn btn-add-user pull-right" value="Login" />
+                </form>
+                <div class="is-register hidden">
+                    <p>Already Registered <a>Login</a></p>
+                </div>
+                <div class="is-login">
+                    <p>Not Registered Yet <a>Register</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

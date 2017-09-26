@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <img class="add-banner" src="/img/Banners/banner-add.jpg" />
+        </div>
+        <div class="col-md-12">
+            <div class="add-post">
+                <div class="title">
+                    <div class="title-image">
+                        <img src="/icon/8bit_icon_set/background/drawing.png">
+                    </div>
+                    <div class="title-text">
+                        <p>Add New Post</p>
+                    </div>
+                </div>
+                <div class="post-editor clearfix">
+                    <form action="/posts/Add" method="post" id="addPost">
+                        <div class="form-group">
+                            <label for="name">Title</label>
+                            <input type="text" class="form-control" name="title" placeholder="Title">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Banner Image URL</label>
+                            <input type="text" class="form-control" name="bannerImageUrl" placeholder="Banner Image URL">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Post Image URL</label>
+                            <input type="text" class="form-control" name="postImageUrl" placeholder="Post Image URL">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Description</label>
+                            <textarea type="text" class="form-control" name="description" placeholder="Description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Content</label>
+                            <textarea type="text" class="form-control summernote" name="content"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Category</label>
+                            <select name="category">
+                                {{#each categoryList}}
+                                <option value="{{id}}">{{name}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        <input type="submit" id="AddPost" class="btn btn-add-post pull-right" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

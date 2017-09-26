@@ -1,0 +1,18 @@
+<div class="popular-posts">
+    <div class="title">
+        <div class="title-image">
+            <img src="/icon/8bit_icon_set/background/heart.png" />
+        </div>
+        <div class="title-text">
+            <p>Popular Posts</p>
+        </div>
+    </div>
+    <div class="posts">
+        {{#each postList}}
+        <div class="item">
+            <img class="img-circle" src="{{postImageUrl}}" />
+            <p>{{desciption}}<span class="author">{{postedBy.name}}</span></p>
+        </div>
+        {{/each}}
+    </div>
+</div>
