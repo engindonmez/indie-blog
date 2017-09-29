@@ -35,9 +35,15 @@ router.post('/add', function (req, res) {
     var bannerImageUrl = req.body.bannerImageUrl;
     var postImageUrl = req.body.postImageUrl;
     var category = [];
+    if (Array.isArray(req.body.category)) {
         for (var i = 0; i < req.body.category.length; i++) {
             category.push(req.body.category[i]);
+            console.log(req.body.category[i]);
         };
+    }
+    else {
+        category.push(req.body.category);
+    }
     var postedBy = req.user.id;
     // var comments = req.body.comments;
 
